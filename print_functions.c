@@ -27,8 +27,9 @@ int print_string(va_list printfall)
 	return (i);
 }
 
-int print_percent()
+int print_percent(va_list printfall)
 {
+	(void) printfall;
 	_putchar('%');
 	return (1);
 }
