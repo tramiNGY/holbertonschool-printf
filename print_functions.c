@@ -2,15 +2,17 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-void print_char(va_list printfall)
+int print_char(va_list printfall)
 {
 	char temp;
 
 	temp = va_arg(printfall, int);
 	_putchar(temp);
+
+	return (1);
 }
 
-void print_string(va_list printfall)
+int print_string(va_list printfall)
 {
 	int i;
 	char *temp;
@@ -22,9 +24,11 @@ void print_string(va_list printfall)
 		_putchar(temp[i]);
 		i++;
 	}
+	return (i);
 }
 
-void print_percent()
+int print_percent()
 {
 	_putchar('%');
+	return (1);
 }
