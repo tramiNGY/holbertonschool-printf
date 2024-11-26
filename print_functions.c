@@ -28,6 +28,6 @@ void print_percent(va_list, printfall)
 {
 	char temp;
 
-	temp = va_argv(printfall, char);
+	temp = va_arg(printfall, char);
 	_putchar('%');
 }
