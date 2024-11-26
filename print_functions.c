@@ -9,7 +9,7 @@ void print_char(va_list, printfall)
 	_putchar(temp);
 }
 
-void print_str(va_list, printfall)
+void print_string(va_list, printfall)
 {
 	int i;
 	char *temp;
@@ -23,7 +23,7 @@ void print_str(va_list, printfall)
 	}
 }
 
-void print_prct (va_list, printfall)
+void print_percent(va_list, printfall)
 {
 	char temp;
 

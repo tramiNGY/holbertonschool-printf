@@ -10,7 +10,7 @@ typedef struct type
 int _putchar(char c);
 int _printf(const char *format, ...);
 void print_char(va_list, printfall);
-void print_str(va_list, printfall);
-void print_prct (va_list, printfall);
+void print_string(va_list, printfall);
+void print_percent(va_list, printfall);
 
 #endif
