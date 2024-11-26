@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-void print_decimal(va_list printfall)
+int print_decimal(va_list printfall)
 {
        	int temp;
 
@@ -10,4 +10,5 @@ void print_decimal(va_list printfall)
 	if (temp < 0)
 		_putchar ('-');
 	_putchar(temp);
+	return (1);
 }
