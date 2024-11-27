@@ -13,9 +13,7 @@
 
 int print_decimalint(va_list printfall)
 {
-	int temp, temptemp, templen, div, len, r, intsign;
-
-	intsign = 1;
+	int temp, temptemp, templen, div = 1, len = 0, r, intsign = 1;
 
 	temp = va_arg(printfall, int);
 	if (temp == 0)
@@ -29,13 +27,13 @@ int print_decimalint(va_list printfall)
 		temp *= -1;
 		intsign = -1;
 	}
-	temptemp = temp, len = 0;
+	temptemp = temp;
 	while (temptemp != 0)
 	{
 		temptemp /= 10;
 		len++;
 	}
-	templen = len, div = 1;
+	templen = len;
 	while (templen != 1)
 	{
 		div *= 10;
