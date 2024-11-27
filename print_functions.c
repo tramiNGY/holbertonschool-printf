@@ -40,9 +40,21 @@ int print_string(va_list printfall)
 {
 	int i;
 	char *temp;
-
+	
 	temp = va_arg(printfall, char*);
 	i = 0;
+
+	if (temp == NULL)
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+		return (i);
+	}
+
 	while (temp[i] != '\0')
 	{
 		_putchar(temp[i]);
