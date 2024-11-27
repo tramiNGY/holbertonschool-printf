@@ -14,12 +14,16 @@
 int print_decimalint(va_list printfall)
 {
 	int temp, temptemp,templen, div, len, r;
+	int intsign;
+
+	intsign = 1;
 
 	temp = va_arg(printfall, int);
 	if (temp < 0)
 	{
 		_putchar('-');
 		temp *= -1;
+		intsign = -1;
 	}
 	temptemp = temp;
 	len = 0;
@@ -44,5 +48,8 @@ int print_decimalint(va_list printfall)
 		else
 			_putchar((r % 10) + '0');
 	}
+	if (intsign == -1)
+		len++;
+
 	return (len);
 }
