@@ -1,6 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdarg.h>
+#include <math.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * print_decimal - prints decimal integer (base 10) from printfall
@@ -10,15 +13,40 @@
  * before va_arg points to next argument
  * Return: return number of digits printed
  * DESCRIPTION TO BE UPDATED AFTER FUNCTION CORRECTION
-*/
+ */
 
-int print_decimal(va_list printfall)
+int print_decimalint(va_list printfall)
 {
-	int temp;
+	int temp, temptemp,templen, div, len, r;
 
 	temp = va_arg(printfall, int);
 	if (temp < 0)
-		_putchar ('-');
-	_putchar(temp);
-	return (1);
+	{
+		_putchar('-');
+		temp *= -1;
+	}
+	temptemp = temp;
+	len = 0;
+	while (temptemp != 0)
+	{
+		temptemp /= 10;
+		len++;
+	}
+	templen = len;
+	div = 1;
+	while (len != 1)
+	{
+		div *= 10;
+		len--;
+	}
+	while(div != 0)
+	{
+		r = temp / div;
+		div /= 10;
+		if (r < 10)
+			_putchar((r) + '0');
+		else
+			_putchar((r % 10) + '0');
+	}
+	return (templen);
 }
