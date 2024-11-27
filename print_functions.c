@@ -40,7 +40,7 @@ int print_string(va_list printfall)
 {
 	int i;
 	char *temp;
-	
+
 	temp = va_arg(printfall, char*);
 	i = 0;
 
