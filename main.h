@@ -20,6 +20,6 @@ int _printf(const char *format, ...);
 int print_char(va_list printfall);
 int print_string(va_list printfall);
 int print_percent(va_list printfall);
-int print_decimal(va_list printfall);
+int print_decimalint(va_list printfall);
 
 #endif
