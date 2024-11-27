@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 {
 	Datatype datatype[] = {
 		{"c", print_char}, {"s", print_string}, {"%", print_percent},
-		{"d", print_decimal}, {"i", print_decimalint}, {NULL, NULL}
+		{"d", print_decimalint}, {"i", print_decimalint}, {NULL, NULL}
 };
 	va_list printfall;
 	int i, j, count;
