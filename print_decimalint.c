@@ -16,6 +16,11 @@ int print_decimalint(va_list printfall)
 	int temp, temptemp, templen, div, len, r;
 
 	temp = va_arg(printfall, int);
+	if (temp == 0)
+	{
+		_putchar('0');
+		return(1);
+	}
 	if (temp < 0)
 	{
 		_putchar('-');
