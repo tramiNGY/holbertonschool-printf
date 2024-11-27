@@ -1,1 +1,2 @@
-wesh la team
+#!/bin/bash
+printf function
