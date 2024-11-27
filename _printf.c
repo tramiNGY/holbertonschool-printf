@@ -42,16 +42,18 @@ int _printf(const char *format, ...)
 	count = 0, i = 0;
 	va_start(printfall, format);
 
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{	va_end(printfall);
+		return (count);
+	}
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			count++;
-		}
-		else
-		{
-			i++, j = 0;
+		} else
+		{	i++, j = 0;
 			while (datatype[j].specifier != NULL)
 			{
 				if (format[i] == *datatype[j].specifier)
@@ -68,7 +70,6 @@ int _printf(const char *format, ...)
 				va_arg(printfall, int *);
 			}
 		} i++;
-	}
-	va_end(printfall);
+	} va_end(printfall);
 	return (count);
 }
