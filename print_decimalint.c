@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * print_decimal - prints decimal integer (base 10) from printfall
+ * print_decimalint - prints decimal integer (base 10) from printfall
  * @printfall: ba_list containing all the variadic arguments
  * to be printed
  * Remark1: temp copies current int argument value
@@ -13,7 +13,7 @@
 
 int print_decimalint(va_list printfall)
 {
-	int temp, temptemp,templen, div, len, r;
+	int temp, temptemp, templen, div, len, r;
 
 	temp = va_arg(printfall, int);
 	if (temp < 0)
@@ -35,7 +35,7 @@ int print_decimalint(va_list printfall)
 		div *= 10;
 		templen--;
 	}
-	while(div != 0)
+	while (div != 0)
 	{
 		r = temp / div;
 		div /= 10;
