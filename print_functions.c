@@ -52,7 +52,7 @@ int print_string(va_list printfall)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
-		return (i);
+		return (i + 6);
 	}
 
 	while (temp[i] != '\0')
