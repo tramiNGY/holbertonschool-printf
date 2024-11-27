@@ -1,9 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdarg.h>
-#include <math.h>
-#include <string.h>
-#include <stdio.h>
 
 /**
  * print_decimal - prints decimal integer (base 10) from printfall
@@ -34,10 +30,10 @@ int print_decimalint(va_list printfall)
 	}
 	templen = len;
 	div = 1;
-	while (len != 1)
+	while (templen != 1)
 	{
 		div *= 10;
-		len--;
+		templen--;
 	}
 	while(div != 0)
 	{
@@ -48,5 +44,5 @@ int print_decimalint(va_list printfall)
 		else
 			_putchar((r % 10) + '0');
 	}
-	return (templen);
+	return (len);
 }
