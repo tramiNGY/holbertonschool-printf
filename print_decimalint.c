@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
-
+#include <stdio.h>
 /**
  * print_decimalint - prints decimal integer (base 10) from printfall
  * @printfall: ba_list containing all the variadic arguments
@@ -13,7 +13,7 @@
 
 int print_decimalint(va_list printfall)
 {
-	int temp, temptemp, templen, div = 1, len = 0, r, intsign = 1;
+	int temp, temptemp, div = 1, len = 0, r;
 
 	temp = va_arg(printfall, int);
 	if (temp == 0)
@@ -25,20 +25,15 @@ int print_decimalint(va_list printfall)
 	{
 		_putchar('-');
 		temp *= -1;
-		intsign = -1;
+		len += 1;
 	}
 	temptemp = temp;
 	while (temptemp != 0)
 	{
-		temptemp /= 10;
+		temptemp /= 10, div *= 10;
 		len++;
 	}
-	templen = len;
-	while (templen != 1)
-	{
-		div *= 10;
-		templen--;
-	}
+	div /= 10;
 	while (div != 0)
 	{
 		r = temp / div, div /= 10;
@@ -47,7 +42,5 @@ int print_decimalint(va_list printfall)
 		else
 			_putchar((r % 10) + '0');
 	}
-	if (intsign == -1)
-		len++;
 	return (len);
 }
