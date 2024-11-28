@@ -34,13 +34,12 @@ Contains the sub-function of allowed specifier decimal integer (%d and %i: both 
 Header containing all the prototypes and structure definition for allowed specifiers and print functions associated.
 
 ## Format specifiers
-char %c
-
-string %s
-
-percentage %%
-
-decimal integer %d and %i
+| Type | Specifier |
+| :---------------: |:---------------:|
+|char | %c |
+|string | %s |
+| percentage | %% |
+| decimal integer | %d and %i |
 
 ## Other requirements
 - Betty style: Holbertonschool code layout rules
@@ -206,4 +205,3 @@ In this simplified project the function:
 [Tra Mi NGUYEN](https://github.com/tramiNGY)
 
 [Tom DIBELLONIO](https://github.com/totomus83)![badge github image (1)](https://badgen.net/badge/icon/github?icon=github&label)
-<p align="center"> <img src="https://badgen.net/badge/icon/github?icon=github&label" alt="badge1" /> <p/>
