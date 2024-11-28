@@ -33,13 +33,12 @@ Contains the sub-function of allowed specifier decimal integer (%d and %i: both 
 Header containing all the prototypes and structure definition for allowed specifiers and print functions associated.
 
 ## Format specifiers
-char %c
-
-string %s
-
-percentage %%
-
-decimal integer %d and %i
+| File name | Description |
+| :---------------: |:---------------:|
+| char | %c |
+| string | %s |
+| percentage | %% |
+| decimal int | %d and %i |
 
 ## Other requirements
 - Betty style: Holbertonschool code layout rules
