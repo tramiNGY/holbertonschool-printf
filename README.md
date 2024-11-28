@@ -201,7 +201,6 @@ In this simplified project the function:
 - Does not handle the length modifiers
 
 ## Authors
+[Tra Mi NGUYEN](https://github.com/tramiNGY)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Badge](https://badgen.net/badge/icon/github?icon=github&label)
+[Tom DIBELLONIO](https://github.com/totomus83)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Badge](https://badgen.net/badge/icon/github?icon=github&label)
 
-[Tra Mi NGUYEN](https://github.com/tramiNGY)
-
-[Tom DIBELLONIO](https://github.com/totomus83)![badge github image (1)](https://badgen.net/badge/icon/github?icon=github&label)
