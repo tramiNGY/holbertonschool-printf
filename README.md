@@ -1,3 +1,4 @@
+
 ![printf image image (1)](https://www.commentcoder.com/static/bd7bd17f9fccb49b563e643f73bc87b3/b17f8/c-printf.jpg)
 
 # **Printf simplified**
@@ -33,12 +34,13 @@ Contains the sub-function of allowed specifier decimal integer (%d and %i: both 
 Header containing all the prototypes and structure definition for allowed specifiers and print functions associated.
 
 ## Format specifiers
-| File name | Description |
-| :---------------: |:---------------:|
-| char | %c |
-| string | %s |
-| percentage | %% |
-| decimal int | %d and %i |
+char %c
+
+string %s
+
+percentage %%
+
+decimal integer %d and %i
 
 ## Other requirements
 - Betty style: Holbertonschool code layout rules
@@ -203,5 +205,5 @@ In this simplified project the function:
 
 [Tra Mi NGUYEN](https://github.com/tramiNGY)
 
-[Tom Dibellonio](https://github.com/totomus83)
-
+[Tom DIBELLONIO](https://github.com/totomus83)![badge github image (1)](https://badgen.net/badge/icon/github?icon=github&label)
+<p align="center"> <img src="https://badgen.net/badge/icon/github?icon=github&label" alt="badge1" /> <p/>
