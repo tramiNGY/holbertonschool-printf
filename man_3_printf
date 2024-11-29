@@ -1,85 +1,89 @@
-NAME
-	_printf - format and print data with allowed specifiers
-
-SYNOPSIS
-
-	_printf FORMAT [ARGUMENT]...
-
-DESCRIPTION
-
-	This _printf is a partially working printf because it doesn't take all of the specifiers printf usually takes.
-
-	Print ARGUMENT(s) according to FORMAT if allowed specifier
-	FORMAT  controls  the  output  as in C printf.
-	Interpreted sequences are:
-
-	\"	double quote
-
-	\n	new line
-
-	%% 	a single %
-
-
-FORMAT SPECIFIER
-
-	%c	char
-
-	%s	string
-
-	%%	%
-
-	%d	decimal int
-
-	%i	decimal int
-
-EXAMPLE
-
-	_printf("HelloWorld!\n");
-
-	_printf("%c\n", a);
-
-	_printf("Hello my name is %s.\n", Raph);
-
-	_printf("%%\n");
-
-	_printf("I am %d years old and he is %i years old.\n", 100, 23);
-
-	_printf("The computer is on sales at %d %%.\n", -20);
-
-	_printf("The result is %i.\n", -999999);
-
-OUTPUT EXAMPLE
-
-	HelloWorld!
-
-	a
-
-	Hello my name is Raph.
-
-	%
-
-	I am 100 years old and he is 23 years old.
-
-	The computer is on sales at -20%.
-
-	The result is -999999.
-
-BUGS
-
-	Does not reproduce the buffer handling of the C library printf function
-	Does not handle the flag characters
-	Does not handle field width
-	Does not handle precision
-	Does not handle the length modifiers
-
-NOTES
-
-	All your files are compiled on Ubuntu 20.04 LTS using gcc.
-
-SEE ALSO
-
-	man printf(3)
-
-AUTHOR(s)
-
-	Written by Tra Mi NGUYEN Tom DIBELLONIO
+.\" Manpage for man_3_printf
+.TH man 3 "29 November 2024" "version 1.0" "man_3_printf manpage"
+.SH NAME
+.B _printf
+- a simplified printf which takes a format string and prints data with allowed specifiers in the standard output returning number of characters printed.
+.SH SYNOPSIS
+#include "main.h"
+.PP
+int _printf(const char *format, ...)
+.SH DESCRIPTION
+This _printf is a partially working printf because it doesn't take all of the specifiers printf usually takes.
+.PP
+It only takes 5 format specifiers which can be printed in the standard output.
+.PP
+The non-allowed specifiers will just be considered as regular characters and % with letter of specifier will be printed in the standard output.
+.PP
+The function will print string inputed as well as all arguments if any of allowed specifiers and return total number of printed characters.
+.SH RETURN
+If the function takes NULL or '%' only as inputed format, it will cause an error and will return (-1) as fail indication.
+.PP
+If the function is successful, it will return (count) an integer of the total number of characters printed in the standard output.
+.SH FORMAT
+The format string is composed zero or more directives: it can hold only a simple string or contains '%' specifiers. 
+.SH FORMAT SPECIFIERS
+.I %c
+The %c format specifier is used to print out a single character.
+.PP
+.I %s
+The %s format specifier is used to print out a string of characters.
+.I %%
+The %% format specifier is used to print out a percentage symbol.
+.I %d
+The %d format specifier is used to print out a decimal integer (base 10).
+.I %i
+The %i format specifier is used to print out a decimal integer (base 10).
+.SH EXAMPLE
+#include "main.h"
+.PP
+int main(void)
+.PP
+{
+.IP
+_printf("HelloWorld!\n");
+.IP
+_printf("%c\n", a);
+.IP
+_printf("Hello my name is %s.\n", Raph);
+.IP
+_printf("%%\n");
+.IP
+_printf("I am %d years old and he is %i years old.\n", 100, 23);
+.IP
+_printf("The computer is on sales at %d %%.\n", -20);
+.IP
+_printf("The result is %i.\n", -999999);
+.IP
+return (0);
+.PP
+}
+.SH OUTPUT EXAMPLE
+HelloWorld!
+.PP
+a
+.PP
+Hello my name is Raph.
+.PP
+%
+.PP
+I am 100 years old and he is 23 years old.
+.PP
+The computer is on sales at -20%.
+.PP
+The result is -999999.
+.SH BUGS
+Does not reproduce the buffer handling of the C library printf function
+.PP
+Does not handle the flag characters
+.PP
+Does not handle field width
+.PP
+Does not handle precision
+.PP
+Does not handle the length modifiers
+.SH NOTES
+All your files are compiled on Ubuntu 20.04 LTS using command gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+.SH SEE ALSO
+man printf(3)
+.SH AUTHOR(s)
+Written by Tra Mi NGUYEN and Tom DIBELLONIO
