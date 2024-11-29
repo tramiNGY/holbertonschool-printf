@@ -1,0 +1,85 @@
+NAME
+	_printf - format and print data with allowed specifiers
+
+SYNOPSIS
+
+	_printf FORMAT [ARGUMENT]...
+
+DESCRIPTION
+
+	This _printf is a partially working printf because it doesn't take all of the specifiers printf usually takes.
+
+	Print ARGUMENT(s) according to FORMAT if allowed specifier
+	FORMAT  controls  the  output  as in C printf.
+	Interpreted sequences are:
+
+	\"	double quote
+
+	\n	new line
+
+	%% 	a single %
+
+
+FORMAT SPECIFIER
+
+	%c	char
+
+	%s	string
+
+	%%	%
+
+	%d	decimal int
+
+	%i	decimal int
+
+EXAMPLE
+
+	_printf("HelloWorld!\n");
+
+	_printf("%c\n", a);
+
+	_printf("Hello my name is %s.\n", Raph);
+
+	_printf("%%\n");
+
+	_printf("I am %d years old and he is %i years old.\n", 100, 23);
+
+	_printf("The computer is on sales at %d %%.\n", -20);
+
+	_printf("The result is %i.\n", -999999);
+
+OUTPUT EXAMPLE
+
+	HelloWorld!
+
+	a
+
+	Hello my name is Raph.
+
+	%
+
+	I am 100 years old and he is 23 years old.
+
+	The computer is on sales at -20%.
+
+	The result is -999999.
+
+BUGS
+
+	Does not reproduce the buffer handling of the C library printf function
+	Does not handle the flag characters
+	Does not handle field width
+	Does not handle precision
+	Does not handle the length modifiers
+
+NOTES
+
+	All your files are compiled on Ubuntu 20.04 LTS using gcc.
+
+SEE ALSO
+
+	man printf(3)
+
+AUTHOR(s)
+
+	Written by Tra Mi NGUYEN Tom DIBELLONIO
